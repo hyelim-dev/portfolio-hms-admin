@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .no-scroll {
+    overflow: hidden !important;
+  }
+  .menuList {
+    display: none;
+    @apply absolute left-0 py-3 bg-white top-[40px] w-[260px];
+  }
+  .open {
+    display: block;
+  }
+
+  .info_pager span {
+    @apply mx-1 cursor-pointer;
+  }
+  .info_pager .swiper-pagination-bullet-active {
+    @apply bg-primary;
+  }
+
+  .scrollbar {
+    overflow-y: overlay;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(0, 125, 233);
+    border-radius: 0.75rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: rgb(0, 125, 233, 0.1);
+  }
+
+  .scrollbar_g {
+    overflow-y: overlay;
+  }
+
+  .scrollbar {
+    overflow-y: overlay;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(0, 125, 233);
+    border-radius: 0.75rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: rgb(0, 125, 233, 0.1);
+  }
+
+  .scrollbar_g::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .scrollbar_g::-webkit-scrollbar-thumb {
+    background: lightgray;
+    /* background: rgb(0, 125, 233); */
+    border-radius: 0.75rem;
+  }
+
+  .scrollbar_g::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .scrollbar_g::-webkit-scrollbar-thumb:hover {
+    background: gray;
+  }
+
+  .scrollbar_s::-webkit-scrollbar {
+    width: 0.2rem !important;
+    height: 0.2rem !important;
+  }
+
+  .react-datepicker-popper {
+    z-index: 5 !important;
+  }
+
+  .react-datepicker__time-container,
+  .react-datepicker__time-box {
+    width: 65px !important;
+  }
+}
+/* @media only screen and (max-width: 480px) {
+  .Toastify__toast-container {
+    width: 75vw !important;
+    left: auto !important;
+    right: env(safe-area-inset-right) !important;
+  }
+} */
+@layer utilities {
+  .wrap {
+    @apply relative w-full px-6 md:px-0 md:w-web md:m-auto;
+  }
+}
+
+body {
+  @apply text-[3.125vw] md:text-[16px] font-sans;
+  line-height: 1.5;
+}

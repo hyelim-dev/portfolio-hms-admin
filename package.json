@@ -1,0 +1,25 @@
+{
+  "name": "hms-demo",
+  "version": "1.0.0",
+  "description": "Admin demo portfolio project",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run start-hc-it && npm run start-hc-it && npm run start-admin",
+    "dev:admin": "cd packages/admin && npm run dev",
+    "build:admin": "cd packages/admin && npm run build",
+    "start:admin": "cd packages/admin && npm start",
+    "test:admin": "cd packages/admin && npm test",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.4",
+    "apollo-upload-client": "^17.0.0",
+    "react-toastify": "^10.0.5",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "msw": "^2.12.7"
+  }
+}
