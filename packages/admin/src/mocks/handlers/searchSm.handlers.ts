@@ -36,9 +36,6 @@ const searchSMHandler = async ({ request }: { request: Request }) => {
 
     if (rootField !== 'searchSM') return
 
-    console.log('[MSW searchSM] variables:', body.variables)
-    console.log('[MSW searchSM] query:', body.query)
-
     const variables = body.variables ?? {}
     const modelType = String(variables.modelType ?? '')
     const lectureId = Number(variables.lectureId ?? 0)
@@ -64,8 +61,6 @@ const searchSMHandler = async ({ request }: { request: Request }) => {
       }
 
       const paginated = paginate(rows, page, limit)
-
-      console.log('[MSW searchSM] PreInspection rows:', paginated.items)
 
       return HttpResponse.json({
         data: {
@@ -98,8 +93,6 @@ const searchSMHandler = async ({ request }: { request: Request }) => {
       }
 
       const paginated = paginate(rows, page, limit)
-
-      console.log('[MSW searchSM] Certificate rows:', paginated.items)
 
       return HttpResponse.json({
         data: {

@@ -33,8 +33,6 @@ const seeAttendanceHandler = async ({ request }: { request: Request }) => {
     const rootField = getRootField(body.query)
     if (rootField !== 'seeAttendance') return
 
-    console.log('[MSW attendance] seeAttendance variables:', body.variables)
-
     const db = getAttendanceDb()
     const attendanceDate = String(body.variables?.attendanceDate ?? '')
 
@@ -73,8 +71,6 @@ const searchAttendanceHandler = async ({ request }: { request: Request }) => {
     const rootField = getRootField(body.query)
     if (rootField !== 'searchAttendance') return
 
-    console.log('[MSW attendance] searchAttendance variables:', body.variables)
-
     const db = getAttendanceDb()
     const dates = normalizeDates(body.variables?.attendanceDate)
 
@@ -107,8 +103,6 @@ const createAttendanceHandler = async ({ request }: { request: Request }) => {
     const body = (await request.clone().json()) as GqlBody
     const rootField = getRootField(body.query)
     if (rootField !== 'createAttendance') return
-
-    console.log('[MSW attendance] createAttendance variables:', body.variables)
 
     const {
       attendanceDate,
@@ -178,8 +172,6 @@ const editAttendanceHandler = async ({ request }: { request: Request }) => {
     const body = (await request.clone().json()) as GqlBody
     const rootField = getRootField(body.query)
     if (rootField !== 'editAttendance') return
-
-    console.log('[MSW attendance] editAttendance variables:', body.variables)
 
     const { editAttendanceId = [], attendanceState = [] } = body.variables ?? {}
 

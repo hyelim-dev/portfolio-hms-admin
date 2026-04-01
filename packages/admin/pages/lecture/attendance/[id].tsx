@@ -164,17 +164,6 @@ export default function AttendancePage() {
           if (result.searchLectures.ok) {
             const { data } = result.searchLectures
             setLectureData(data[0])
-
-            console.log('assignment.assignment', assignment.assignment)
-            console.log('completion', completion)
-            console.log('raw StudentPayment', data[0].subject.StudentPayment)
-            console.log('assignment.assignment', assignment.assignment)
-            console.log(
-              'student lectureAssignment list',
-              data[0].subject.StudentPayment.map(
-                student => student.lectureAssignment,
-              ),
-            )
             const filterStudent = data[0].subject.StudentPayment.filter(
               student => student.lectureAssignment === assignment.assignment,
             )
@@ -203,10 +192,6 @@ export default function AttendancePage() {
       alert('등록된 시간표가 없습니다.')
     }
   }
-
-  console.log('AttendancePage lectureData', lectureData)
-  console.log('AttendancePage sortStudents', sortStudents)
-  console.log('AttendancePage students', students)
 
   return (
     <>

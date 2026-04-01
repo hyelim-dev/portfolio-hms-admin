@@ -19,7 +19,6 @@ const COUNSEL_TYPES = adviceTypeMockData.filter(
 )
 
 const MANAGERS = STAFF_USERS.filter(u => u.resign === 'N')
-console.log('ss' + MANAGERS)
 export const STUDENT_STATE_ALL: StudentState[] = makeStudentStates(137)
 
 function makeStudentStates(count: number): StudentState[] {

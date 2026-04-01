@@ -125,9 +125,6 @@ const accountingHandler = async ({ request }: { request: Request }) => {
   // 회계 요청이 아니면 바로 패스
   if (!isAccountingRootField(rootField)) return
 
-  console.log('[MSW accounting] rootField:', rootField)
-  console.log('[MSW accounting] variables:', variables)
-
   // 1) 결제내역
   if (rootField === 'seePaymentDetail') {
     const page = Number(variables.page ?? 1)

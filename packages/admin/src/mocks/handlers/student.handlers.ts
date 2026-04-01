@@ -77,8 +77,6 @@ const handler = async ({ request }: { request: Request }) => {
 
     const students = filtered.map(mapStudent)
 
-    console.log('🔥 searchStudent 응답', students)
-
     return HttpResponse.json({
       data: {
         searchStudent: {

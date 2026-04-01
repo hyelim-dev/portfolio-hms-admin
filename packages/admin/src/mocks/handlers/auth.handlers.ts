@@ -12,8 +12,6 @@ const handler = async ({ request }: { request: Request }) => {
       ? body.query.replace(/\s+/g, ' ').match(/\{\s*(\w+)/)?.[1]
       : undefined
 
-  console.log('login' + rootField)
-
   if (rootField !== 'mLogin') return
 
   const isLogin =

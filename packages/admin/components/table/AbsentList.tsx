@@ -71,9 +71,6 @@ const LodingDiv = styled.div`
 `
 
 export default function AbsentList({ lectureId, lectureDates, sortStudents }) {
-  console.log('AbsentList lectureId', lectureId)
-  console.log('AbsentList lectureDates', lectureDates)
-  console.log('AbsentList sortStudents', sortStudents)
   return (
     <>
       <TableArea>

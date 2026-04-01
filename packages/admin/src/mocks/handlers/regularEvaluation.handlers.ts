@@ -38,9 +38,6 @@ const seeRegularEvaluationSetHandler = async ({
 
     if (rootField !== 'seeRegularEvaluationSet') return
 
-    console.log('[MSW regularEvaluation] variables:', body.variables)
-    console.log('[MSW regularEvaluation] query:', body.query)
-
     const variables = body.variables ?? {}
     const lectureId = Number(variables.lectureId ?? 0)
     const subjectId = Number(variables.subjectId ?? 0)
@@ -58,11 +55,6 @@ const seeRegularEvaluationSetHandler = async ({
     }
 
     const paginated = paginate(rows, page, limit)
-
-    console.log(
-      '[MSW regularEvaluation] seeRegularEvaluationSet rows:',
-      paginated.items,
-    )
 
     return HttpResponse.json({
       data: {

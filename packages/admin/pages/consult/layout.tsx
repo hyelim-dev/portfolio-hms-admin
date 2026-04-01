@@ -8,14 +8,6 @@ import { useState, useEffect } from 'react'
 import { useRecoilValue } from 'recoil'
 
 export default function ConsultLayout({ children }) {
-  useEffect(() => {
-    console.log('[ConsultLayout] window?', typeof window)
-    console.log(
-      '[ConsultLayout] controller?',
-      !!navigator.serviceWorker?.controller,
-    )
-  }, [])
-
   const grade = useRecoilValue(gradeState)
   const { useMme } = useMmeQuery()
   const mGrade = useMme('mGrade')

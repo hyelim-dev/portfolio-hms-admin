@@ -15,13 +15,10 @@ const handler = async ({ request }: { request: Request }) => {
       ? body.query.replace(/\s+/g, ' ').match(/\{\s*(\w+)/)?.[1]
       : undefined
 
-  console.log('mMe' + rootField)
-
   const q = body.query ?? ''
 
   const isMe =
     body.operationName === 'MMe' || (typeof q === 'string' && q.includes('mMe'))
-  // console.log(isMe)
 
   if (!isMe) return
   const token = request.headers.get('token') ?? ''
@@ -29,7 +26,6 @@ const handler = async ({ request }: { request: Request }) => {
   const user =
     mockUsers.find(u => token.includes(u.mUserId)) ??
     mockUsers.find(u => u.mUserId === 'general')
-  console.log(user)
 
   return HttpResponse.json({
     data: {

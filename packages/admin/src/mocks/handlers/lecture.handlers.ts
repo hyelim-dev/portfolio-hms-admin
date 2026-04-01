@@ -50,9 +50,6 @@ const seeLecturesHandler = async ({ request }: { request: Request }) => {
 
   if (rootField !== 'seeLectures') return
 
-  console.log('[MSW lecture] seeLectures variables:', body.variables)
-  console.log('[MSW lecture] seeLectures query:', body.query)
-
   const page = Number(body.variables?.page) || 1
   const limit = Number(body.variables?.limit) || 10
 
@@ -79,9 +76,6 @@ const searchLecturesHandler = async ({ request }: { request: Request }) => {
 
   if (rootField !== 'searchLectures') return
 
-  console.log('[MSW lecture] searchLectures variables:', body.variables)
-  console.log('[MSW lecture] searchLectures query:', body.query)
-
   const lectureId =
     Number(body.variables?.searchLecturesId) ||
     Number(body.variables?.id) ||
@@ -90,9 +84,6 @@ const searchLecturesHandler = async ({ request }: { request: Request }) => {
     Number(body.variables?.input?.lectureId)
 
   const found = lectureMockData.find(item => item.id === lectureId)
-
-  console.log('[MSW lecture] searchLectures lectureId:', lectureId)
-  console.log('[MSW lecture] searchLectures found:', found)
 
   return HttpResponse.json({
     data: {
