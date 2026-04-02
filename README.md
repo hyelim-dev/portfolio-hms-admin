@@ -51,9 +51,7 @@ npm run dev:admin
 
 권한에 따라 동일한 화면에서도 UI와 기능이 다르게 동작합니다.
 
-```md
 ![role-based-ui](./assets/role-based-ui.jpg)
-```
 
 ---
 
@@ -72,9 +70,7 @@ npm run dev:admin
 - 출석 상태 변경 시 출결 통계가 함께 반영되는 구조
 - 상태 변화가 다른 데이터에 연결되는 흐름 구현
 
-```md
 ![attendance](./assets/attendance-update.gif)
-```
 
 ---
 
@@ -83,9 +79,7 @@ npm run dev:admin
 - 배정 여부에 따라 수료 관련 버튼이 조건부로 노출
 - 상태에 따라 UI와 기능이 분기되는 구조
 
-```md
 ![status](./assets/status-flow.gif)
-```
 
 ---
 
@@ -94,9 +88,7 @@ npm run dev:admin
 - 환불 요청 → 승인 → 완료까지 상태 기반 처리
 - 회계 데이터와 수강 상태가 함께 변경되는 구조
 
-```md
 ![refund](./assets/refund-request-to-complete.gif)
-```
 
 ---
 
