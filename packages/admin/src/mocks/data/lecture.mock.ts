@@ -171,9 +171,9 @@ export const lectureMockData: MockLecture[] = [
     teachers: [
       {
         __typename: 'Member',
-        id: 9001,
-        mUserId: 'teacher01',
-        mUsername: '김강사',
+        id: 3,
+        mUserId: 'teacher',
+        mUsername: '강사',
       },
     ],
   },

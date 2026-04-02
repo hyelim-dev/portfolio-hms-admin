@@ -1,3 +1,5 @@
+import { resetStudentDb } from '@/src/mocks/storage/studentStorage'
+import { Button } from '@nextui-org/react'
 import styled from 'styled-components'
 
 const FooterCon = styled.footer`
@@ -34,12 +36,21 @@ const WebBtn = styled.a`
   font-weight: bold;
   background: ${({ theme }) => theme.colors.primary};
 
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 650px) {
     display: flex;
   }
 `
 
 export default function FooterComponent() {
+  const handleReset = () => {
+    const ok = confirm('Mock 데이터를 초기화하시겠습니까?')
+
+    if (!ok) return
+
+    resetStudentDb()
+    location.reload()
+  }
+
   return (
     <>
       <FooterCon>
@@ -48,9 +59,14 @@ export default function FooterComponent() {
           reserved.
         </Copyright>
       </FooterCon>
-      <WebBtn href={''} target="_blank">
-        <i className="xi-mobile" />
-        아카데미 홈페이지 바로가기
+      <WebBtn
+        href="#"
+        onClick={e => {
+          e.preventDefault()
+          handleReset()
+        }}
+      >
+        mock 데이터 리셋
       </WebBtn>
     </>
   )

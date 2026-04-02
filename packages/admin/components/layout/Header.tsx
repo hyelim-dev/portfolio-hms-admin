@@ -119,7 +119,15 @@ const HeaderRt = styled.div`
     gap: 1rem;
   }
 `
+const BtnDiv = styled.div`
+  @media screen and (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
 
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+`
 const WebBtn = styled.a`
   display: flex;
   align-items: center;
@@ -451,27 +459,17 @@ export default function Header() {
             placement="left"
             isDisabled={navOpen ? true : false}
           >
-            <Button
-              color="danger"
-              variant="flat"
-              size="sm"
-              onClick={handleReset}
-            >
-              mock 데이터 리셋
-            </Button>
+            <BtnDiv>
+              <Button
+                color="danger"
+                variant="flat"
+                size="sm"
+                onClick={handleReset}
+              >
+                mock 데이터 리셋
+              </Button>
+            </BtnDiv>
           </Tooltip>
-          {/* <Tooltip
-            content="아카데미 홈페이지 바로가기"
-            placement="left"
-            isDisabled={navOpen ? true : false}
-          >
-            <WebBtn
-              href={``}
-              target="_blank"
-            >
-              <i className="xi-desktop" />
-            </WebBtn>
-          </Tooltip> */}
           <HeaderNoti />
           <Suspense
             fallback={
