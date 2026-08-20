@@ -174,4 +174,4 @@ npm run dev:admin
 
 프로젝트에서 맡았던 업무 범위와 실제 HMS의 설계·문제 해결 내용은 Notion 포트폴리오에서 더 자세히 확인할 수 있습니다.
 
-👉 https://www.notion.so/Portfolio-Dashboard-2ff692c7c7048062991ced8226472952
+👉 https://narrow-shake-34d.notion.site/3c2692c7c70480309554e3562748bbfb?pvs=74
