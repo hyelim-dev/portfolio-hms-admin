@@ -37,6 +37,7 @@
 
 ```bash
 npm install
+```
 
 ### 2. 실행
 
